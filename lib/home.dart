@@ -28,9 +28,9 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             ...itemList.map(
               (user) => ListTile(
-                key: Key("item_${user['id']}"),
                 title: Text(user['name']),
                 trailing: Checkbox(
+                  key: Key("item_${user['id']}"),
                   value: user['is_checked'],
                   onChanged: (bool? value) {
                     setState(() {

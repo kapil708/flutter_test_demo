@@ -7,10 +7,11 @@ Future<void> home({required WidgetTester tester, required CommonCaseType type}) 
   List<String> parentNavigation = ["home"];
 
   await doTest([...parentNavigation, "Click on 1st item"], () async {
-    await tap(finder: find.byKey(const Key("item__0")), tester: tester);
+    await tap(finder: find.byKey(const Key("item_0")), tester: tester);
   });
 
   await doTest([...parentNavigation, "Click on 2nd item"], () async {
-    await tap(finder: find.byKey(const Key("item__1")), tester: tester);
+    await tap(finder: find.byKey(const Key("item_1")), tester: tester);
+    await tester.pumpAndSettle(duration1s);
   });
 }
